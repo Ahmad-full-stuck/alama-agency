@@ -22,7 +22,7 @@ export function Portfolio() {
         <SectionHeading
           align="start"
           eyebrow={lang === "ar" ? "أعمالنا" : "Our Work"}
-          title={lang === "ar" ? "شغلنا يحچي عننا" : "Our work speaks for us"}
+          title={lang === "ar" ? "شغلنا يحجي عننا" : "Our work speaks for us"}
           description={
             lang === "ar"
               ? "مختارات من مشاريع اشتغلنا عليها بمختلف المجالات — من الهوية للحملة للتصوير."

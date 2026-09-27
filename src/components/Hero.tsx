@@ -107,7 +107,7 @@ export function Hero() {
               </span>
               <span className="text-start leading-tight">
                 <span className="block font-display text-sm font-bold text-white">
-                  {lang === "ar" ? "نتائج تُقاس" : "Measurable results"}
+                  {lang === "ar" ? "نتائج تقاس" : "Measurable results"}
                 </span>
                 <span className="font-latin text-[10px] font-medium uppercase tracking-[0.18em] text-white/60">
                   +218% reach

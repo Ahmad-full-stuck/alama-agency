@@ -18,10 +18,10 @@ export const nav: { key: string; label: Bilingual; href: string }[] = [
 export const hero = {
   eyebrow: { ar: "وكالة إعلانات وصناعة محتوى", en: "Advertising & Content Agency" } as Bilingual,
   titleLine1: { ar: "نسوي حملات", en: "We build campaigns" } as Bilingual,
-  titleHighlight: { ar: "الناس تحچي عنها", en: "people actually talk about" } as Bilingual,
-  titleLine2: { ar: "مو تحچي عليها", en: "not just campaigns about them" } as Bilingual,
+  titleHighlight: { ar: "الناس تحجي عنها", en: "people actually talk about" } as Bilingual,
+  titleLine2: { ar: "مو تحجي عليها", en: "not just campaigns about them" } as Bilingual,
   subtitle: {
-    ar: "خلّي شغلك يوصل، مو بس ينشاف. فريق علامة يشتغل على الفكرة والتنفيذ والنتيجة سوا، من أول جلسة إلى يوم تشوف الأثر بعينك.",
+    ar: "خلي شغلك يوصل، مو بس ينشاف. فريق علامة يشتغل على الفكرة والتنفيذ والنتيجة سوا، من أول جلسة إلى يوم تشوف الأثر بعينك.",
     en: "Make your work land — not just get seen. Alama's team works on the idea, the execution, and the outcome together, from the first session to the day you see the impact.",
   } as Bilingual,
   ctaPrimary: { ar: "خلنا نسوي شي كبير", en: "Let's build something big" } as Bilingual,
@@ -32,7 +32,7 @@ export const hero = {
 };
 
 export const stats: { value: string; labelAr: string; labelEn: string }[] = [
-  { value: "+120", labelAr: "حملة منفّذة", labelEn: "Campaigns shipped" },
+  { value: "+120", labelAr: "حملة منفذة", labelEn: "Campaigns shipped" },
   { value: "+45", labelAr: "براند وثق بنا", labelEn: "Brands trusted us" },
   { value: "×3.4", labelAr: "متوسط نمو النتائج", labelEn: "Average results growth" },
   { value: "24/7", labelAr: "متابعة وتقارير", labelEn: "Monitoring & reporting" },
@@ -93,7 +93,7 @@ export const about = {
   tags: [
     { ar: "بولد وواثقة", en: "Bold & Confident" },
     { ar: "حادة بأفكارها", en: "Sharp Thinking" },
-    { ar: "مودرن دايماً", en: "Always Modern" },
+    { ar: "مودرن دايما", en: "Always Modern" },
     { ar: "نتائج فوق الكلام", en: "Results Over Talk" },
   ],
 };
@@ -116,7 +116,7 @@ export const services: {
     icon: "camera",
     titleAr: "صناعة محتوى",
     titleEn: "Content Production",
-    descAr: "من الفكرة للتصوير للمونتاج، محتوى يوقف السكرول ويخلي براندك يحچي بصوته الحقيقي.",
+    descAr: "من الفكرة للتصوير للمونتاج، محتوى يوقف السكرول ويخلي براندك يحجي بصوته الحقيقي.",
     descEn: "From concept to shoot to edit — content that stops the scroll and gives your brand its real voice.",
   },
   {
@@ -213,7 +213,7 @@ export const process: { num: string; titleAr: string; titleEn: string; descAr: s
     num: "02",
     titleAr: "نخطط",
     titleEn: "Plan",
-    descAr: "نحط استراتيجية واضحة: شنو نحچي، وين نحچيه، ومتى بالضبط.",
+    descAr: "نحط استراتيجية واضحة: شنو نحجي، وين نحجيه، ومتى بالضبط.",
     descEn: "We build a clear strategy: what to say, where to say it, and exactly when.",
   },
   {
@@ -225,7 +225,7 @@ export const process: { num: string; titleAr: string; titleEn: string; descAr: s
   },
   {
     num: "04",
-    titleAr: "نحسّن",
+    titleAr: "نحسن",
     titleEn: "Optimize",
     descAr: "نراقب الأرقام ونعدل الاتجاه أول بأول، ما نوقف عند أول نتيجة.",
     descEn: "We watch the numbers and adjust direction continuously — we never stop at the first result.",
@@ -235,7 +235,7 @@ export const process: { num: string; titleAr: string; titleEn: string; descAr: s
 export const finalCta = {
   title: { ar: "عندك فكرة؟ خل نسوي منها حملة.", en: "Got an idea? Let's turn it into a campaign." } as Bilingual,
   subtitle: {
-    ar: "احچيلنا عن مشروعك، وخلي الباقي علينا.",
+    ar: "احجيلنا عن مشروعك، وخلي الباقي علينا.",
     en: "Tell us about your project, and leave the rest to us.",
   } as Bilingual,
   cta: { ar: "ابدأ المشروع", en: "Start Your Project" } as Bilingual,
@@ -243,7 +243,7 @@ export const finalCta = {
 
 export const footer = {
   blurb: {
-    ar: "وكالة إبداعية تصنع حملات وإعلانات ومحتوى يخلي براندك يتحچى عنه، مو بس يتشاف.",
+    ar: "وكالة إبداعية تصنع حملات وإعلانات ومحتوى يخلي براندك يتحجى عنه، مو بس يتشاف.",
     en: "A creative agency crafting campaigns, ads, and content that make your brand talked about — not just seen.",
   } as Bilingual,
   linksTitle: { ar: "روابط سريعة", en: "Quick Links" } as Bilingual,
