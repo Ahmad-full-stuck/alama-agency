@@ -13,8 +13,19 @@ interface SiteContextValue {
 
 const SiteContext = createContext<SiteContextValue | null>(null);
 
+function urlParam(key: string): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return new URLSearchParams(window.location.search).get(key);
+  } catch {
+    return null;
+  }
+}
+
 function readTheme(): Theme {
   if (typeof window === "undefined") return "light";
+  const forced = urlParam("theme");
+  if (forced === "dark" || forced === "light") return forced;
   try {
     const stored = window.localStorage.getItem("alama-theme");
     if (stored === "dark" || stored === "light") return stored;
@@ -26,6 +37,8 @@ function readTheme(): Theme {
 
 function readLang(): Lang {
   if (typeof window === "undefined") return "ar";
+  const forced = urlParam("lang");
+  if (forced === "ar" || forced === "en") return forced;
   try {
     const stored = window.localStorage.getItem("alama-lang");
     if (stored === "ar" || stored === "en") return stored;

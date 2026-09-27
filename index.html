@@ -12,15 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap"
       rel="stylesheet"
     />
     <script>
       (function () {
         try {
-          var t = localStorage.getItem("alama-theme");
+          var q = new URLSearchParams(window.location.search);
+          var t = q.get("theme") || localStorage.getItem("alama-theme");
           if (t === "dark") document.documentElement.classList.add("dark");
-          var l = localStorage.getItem("alama-lang");
+          var l = q.get("lang") || localStorage.getItem("alama-lang");
           if (l === "en") {
             document.documentElement.setAttribute("dir", "ltr");
             document.documentElement.setAttribute("lang", "en");
