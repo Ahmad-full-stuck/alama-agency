@@ -167,7 +167,7 @@ export const work: {
     categoryAr: "هوية بصرية + حملة إطلاق",
     categoryEn: "Identity + Launch Campaign",
     cat: "identity",
-    image: "/images/work-1.jpg",
+    image: "images/work-1.jpg",
   },
   {
     tagAr: "محتوى",
@@ -177,7 +177,7 @@ export const work: {
     categoryAr: "صناعة محتوى وتصوير احترافي",
     categoryEn: "Content Production & Photography",
     cat: "content",
-    image: "/images/work-2.jpg",
+    image: "images/work-2.jpg",
   },
   {
     tagAr: "حملة ممولة",
@@ -187,7 +187,7 @@ export const work: {
     categoryAr: "إعلانات ممولة عبر السوشيال ميديا",
     categoryEn: "Paid Social Media Advertising",
     cat: "campaign",
-    image: "/images/work-3.jpg",
+    image: "images/work-3.jpg",
   },
   {
     tagAr: "معرض أعمال",
@@ -197,7 +197,7 @@ export const work: {
     categoryAr: "هوية بصرية وتغطية إعلامية",
     categoryEn: "Brand Identity & Media Coverage",
     cat: "identity",
-    image: "/images/work-4.jpg",
+    image: "images/work-4.jpg",
   },
 ];
 

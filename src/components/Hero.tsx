@@ -89,7 +89,7 @@ export function Hero() {
         >
           <div className="relative overflow-hidden rounded-[2.25rem] border border-white/70 shadow-[0_44px_90px_-45px_rgba(16,16,16,0.75)] dark:border-white/10">
             <img
-              src="/images/hero-visual.jpg"
+              src="images/hero-visual.jpg"
               alt={lang === "ar" ? "حملة إبداعية من تنفيذ علامة" : "A creative campaign by Alama"}
               className="aspect-[4/5] w-full object-cover sm:aspect-[5/5]"
             />

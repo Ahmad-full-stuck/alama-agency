@@ -68,7 +68,7 @@ export function About() {
         >
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 shadow-[0_50px_100px_-55px_rgba(16,16,16,0.85)] dark:border-white/10">
             <img
-              src="/images/about-visual.jpg"
+              src="images/about-visual.jpg"
               alt="Alama Agency"
               className="aspect-[4/5] w-full object-cover"
             />
