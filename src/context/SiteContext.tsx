@@ -1,13 +1,10 @@
 ﻿import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 
 export type Lang = "ar" | "en";
-export type Theme = "dark" | "light";
 
 interface SiteContextValue {
   lang: Lang;
-  theme: Theme;
   toggleLang: () => void;
-  toggleTheme: () => void;
   isAr: boolean;
 }
 
@@ -20,19 +17,6 @@ function urlParam(key: string): string | null {
   } catch {
     return null;
   }
-}
-
-function readTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  const forced = urlParam("theme");
-  if (forced === "dark" || forced === "light") return forced;
-  try {
-    const stored = window.localStorage.getItem("alama-theme");
-    if (stored === "dark" || stored === "light") return stored;
-  } catch {
-    /* ignore */
-  }
-  return "dark";
 }
 
 function readLang(): Lang {
@@ -50,7 +34,6 @@ function readLang(): Lang {
 
 export function SiteProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(readLang);
-  const [theme, setTheme] = useState<Theme>(readTheme);
 
   useEffect(() => {
     const dir = lang === "ar" ? "rtl" : "ltr";
@@ -64,26 +47,24 @@ export function SiteProvider({ children }: { children: ReactNode }) {
   }, [lang]);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.classList.add("dark");
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", theme === "dark" ? "#0a0a0f" : "#fafaf8");
+      ?.setAttribute("content", "#0a0a0f");
     try {
-      window.localStorage.setItem("alama-theme", theme);
+      window.localStorage.removeItem("alama-theme");
     } catch {
       /* ignore */
     }
-  }, [theme]);
+  }, []);
 
   const value = useMemo(
     () => ({
       lang,
-      theme,
       isAr: lang === "ar",
       toggleLang: () => setLang((p) => (p === "ar" ? "en" : "ar")),
-      toggleTheme: () => setTheme((p) => (p === "dark" ? "light" : "dark")),
     }),
-    [lang, theme]
+    [lang]
   );
 
   return <SiteContext.Provider value={value}>{children}</SiteContext.Provider>;

@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Moon, Sun, Languages, ArrowLeft } from "lucide-react";
+import { Menu, X, Languages, ArrowLeft } from "lucide-react";
 import { useSite } from "../context/SiteContext";
 import { nav, hero } from "../data/content";
 import { Logo } from "./Logo";
 
 export function Header() {
-  const { lang, isAr, theme, toggleLang, toggleTheme } = useSite();
+  const { lang, isAr, toggleLang } = useSite();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
@@ -98,14 +98,6 @@ export function Header() {
           >
             <Languages size={14} />
             {isAr ? "EN" : "AR"}
-          </button>
-
-          <button
-            onClick={toggleTheme}
-            aria-label="toggle theme"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-brand-ink/8 bg-white/50 text-brand-ink/80 transition-all duration-300 hover:border-brand-red/40 hover:text-brand-red dark:border-white/10 dark:bg-white/5 dark:text-brand-off/80 dark:hover:text-brand-red-soft"
-          >
-            {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
           </button>
 
           <a

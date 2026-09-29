@@ -22,9 +22,11 @@
     <script>
       (function () {
         try {
+          document.documentElement.classList.add("dark");
+          try {
+            localStorage.removeItem("alama-theme");
+          } catch (e) {}
           var q = new URLSearchParams(window.location.search);
-          var t = q.get("theme") || localStorage.getItem("alama-theme");
-          if (t !== "light") document.documentElement.classList.add("dark");
           var l = q.get("lang") || localStorage.getItem("alama-lang");
           if (l === "en") {
             document.documentElement.setAttribute("dir", "ltr");
