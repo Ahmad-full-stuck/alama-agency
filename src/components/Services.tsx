@@ -1,99 +1,60 @@
 import { motion } from "framer-motion";
-import { Megaphone, Camera, Radar, Fingerprint, TrendingUp, ArrowLeft } from "lucide-react";
+import { Flame, Camera, Radar, FileText } from "lucide-react";
 import { useSite } from "../context/SiteContext";
-import { services } from "../data/content";
+import { services, servicesHeading } from "../data/content";
 import { SectionHeading } from "./SectionHeading";
 
 const iconMap = {
-  megaphone: Megaphone,
+  flame: Flame,
   camera: Camera,
-  trend: Radar,
-  identity: Fingerprint,
-  growth: TrendingUp,
+  chart: Radar,
+  pen: FileText,
 };
 
 export function Services() {
   const { lang } = useSite();
 
   return (
-    <section id="services" className="sec sec-plain relative overflow-hidden">
+    <section id="services" className="sec sec-soft relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-brand-red/7 blur-[140px]" />
+        <div className="bg-grid bg-grid-fade absolute inset-0" />
+        <div className="absolute end-[10%] top-10 h-72 w-72 rounded-full bg-brand-red/10 blur-[130px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow={lang === "ar" ? "خدماتنا" : "What We Do"}
+          eyebrow={servicesHeading.eyebrow[lang]}
           title={
-            lang === "ar" ? "شغلنا يغطي كل جوانب البراند" : "We cover every side of your brand"
+            <>
+              {servicesHeading.titleA[lang]}
+              <span className="text-gradient text-glow">{servicesHeading.titleB[lang]}</span>
+              {servicesHeading.titleC[lang]}
+            </>
           }
-          description={
-            lang === "ar"
-              ? "من الفكرة إلى التنفيذ، كل خدمة نسويها إلها هدف واضح يخدم براندك."
-              : "From idea to execution, every service we offer has a clear purpose that serves your brand."
-          }
+          description={servicesHeading.description[lang]}
         />
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => {
             const Icon = iconMap[s.icon];
-            const feature = i === 0;
             return (
               <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 28 }}
+                key={s.titleEn}
+                initial={{ opacity: 0, y: 36 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.55, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className={
-                  feature
-                    ? "group relative overflow-hidden rounded-[1.9rem] bg-gradient-to-br from-brand-red via-brand-red to-brand-red-dim p-7 text-white shadow-[0_34px_70px_-38px_rgba(227,30,36,0.95)] sm:col-span-2 lg:col-span-2"
-                    : "glass-card group relative overflow-hidden rounded-[1.9rem] p-7"
-                }
+                transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                className="glass-card edge-light group relative overflow-hidden rounded-[1.6rem] p-7 text-center"
               >
-                {feature && (
-                  <>
-                    <span className="sheen absolute inset-0 overflow-hidden" />
-                    <span className="absolute -end-10 -top-10 h-40 w-40 rounded-full bg-white/12 blur-3xl" />
-                    <span className="bg-grid absolute inset-0 opacity-40" />
-                  </>
-                )}
-
-                <div
-                  className={`relative mb-5 flex h-12 w-12 items-center justify-center rounded-2xl transition-all duration-500 ${
-                    feature
-                      ? "bg-white/15 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] group-hover:scale-110"
-                      : "bg-brand-tint text-brand-red group-hover:scale-110 group-hover:bg-brand-red group-hover:text-white dark:bg-white/8 dark:text-brand-red-soft dark:group-hover:bg-brand-red"
-                  }`}
-                >
-                  <Icon size={22} strokeWidth={2.1} />
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-brand-red/20 bg-brand-red/10 text-brand-red transition-all duration-500 group-hover:scale-110 group-hover:bg-brand-red group-hover:text-white dark:bg-brand-red/12 dark:text-brand-red-soft dark:group-hover:text-white">
+                  <Icon size={28} strokeWidth={2} />
                 </div>
-
-                <h3
-                  className={`relative mb-2.5 font-display text-xl font-bold ${
-                    feature ? "text-white" : "text-brand-ink dark:text-brand-off"
-                  }`}
-                >
+                <h3 className="mb-3 font-display text-xl font-extrabold text-brand-ink dark:text-white">
                   {lang === "ar" ? s.titleAr : s.titleEn}
                 </h3>
-                <p
-                  className={`relative max-w-md text-sm leading-relaxed ${
-                    feature ? "text-white/80" : "text-brand-mute dark:text-brand-off/55"
-                  }`}
-                >
+                <p className="text-sm leading-[1.85] text-brand-mute dark:text-brand-off/55">
                   {lang === "ar" ? s.descAr : s.descEn}
                 </p>
-
-                <div
-                  className={`relative mt-5 flex items-center gap-1.5 text-xs font-bold transition-all duration-300 ${
-                    feature
-                      ? "text-white opacity-100"
-                      : "text-brand-red opacity-0 group-hover:opacity-100"
-                  }`}
-                >
-                  {lang === "ar" ? "اكتشف اكثر" : "Learn more"}
-                  <ArrowLeft size={14} className="ltr:-scale-x-100" />
-                </div>
               </motion.div>
             );
           })}

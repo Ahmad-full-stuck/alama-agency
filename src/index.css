@@ -11,9 +11,9 @@
   --color-brand-red-soft: #ff5a5f;
   --color-brand-tint: #fdeced;
   --color-brand-ink: #101010;
-  --color-brand-dark: #0d0d0d;
-  --color-brand-dark2: #151515;
-  --color-brand-dark3: #1e1e1e;
+  --color-brand-dark: #0a0a0f;
+  --color-brand-dark2: #14141a;
+  --color-brand-dark3: #1c1c24;
   --color-brand-off: #fafaf8;
   --color-brand-soft: #f3f3ef;
   --color-brand-line: #e6e6e0;
@@ -53,6 +53,13 @@
   html.dark body {
     background: var(--color-brand-dark);
     color: var(--color-brand-off);
+  }
+
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
   }
 
   h1,
@@ -380,6 +387,64 @@
   .btn-sm {
     padding: 0.7rem 1.35rem;
     font-size: 0.83rem;
+  }
+
+  .dark .btn-primary {
+    box-shadow:
+      0 0 25px rgba(227, 30, 36, 0.45),
+      0 0 60px rgba(227, 30, 36, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.42),
+      0 14px 34px -14px rgba(227, 30, 36, 0.85);
+  }
+  .dark .btn-primary:hover {
+    box-shadow:
+      0 0 40px rgba(227, 30, 36, 0.65),
+      0 0 90px rgba(227, 30, 36, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      0 20px 44px -16px rgba(227, 30, 36, 0.95);
+  }
+
+  /* ── Red text glow (folder-8 identity) ────────────────────────────── */
+  .text-glow {
+    text-shadow: 0 1px 0 rgba(184, 22, 27, 0.25);
+  }
+  .dark .text-glow {
+    text-shadow:
+      0 0 40px rgba(227, 30, 36, 0.55),
+      0 0 80px rgba(227, 30, 36, 0.22);
+  }
+
+  /* ── Edge light outline on glass surfaces ─────────────────────────── */
+  .edge-light {
+    position: relative;
+  }
+  .edge-light::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.35) 0%,
+      transparent 40%,
+      rgba(227, 30, 36, 0.22) 100%
+    ) border-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .dark .edge-light::before {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 40%,
+      rgba(227, 30, 36, 0.3) 100%
+    ) border-box;
   }
 
   /* ── Eyebrow / chip / gradient text ──────────────────────────────── */

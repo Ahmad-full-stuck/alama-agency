@@ -11,234 +11,229 @@ export const nav: { key: string; label: Bilingual; href: string }[] = [
   { key: "home", label: { ar: "الرئيسية", en: "Home" }, href: "#home" },
   { key: "services", label: { ar: "خدماتنا", en: "Services" }, href: "#services" },
   { key: "work", label: { ar: "أعمالنا", en: "Work" }, href: "#work" },
-  { key: "about", label: { ar: "من نحن", en: "About" }, href: "#about" },
   { key: "contact", label: { ar: "تواصل معنا", en: "Contact" }, href: "#contact" },
 ];
 
 export const hero = {
-  eyebrow: { ar: "وكالة إعلانات وصناعة محتوى", en: "Advertising & Content Agency" } as Bilingual,
-  titleLine1: { ar: "نسوي حملات", en: "We build campaigns" } as Bilingual,
-  titleHighlight: { ar: "الناس تحجي عنها", en: "people actually talk about" } as Bilingual,
-  titleLine2: { ar: "مو تحجي عليها", en: "not just campaigns about them" } as Bilingual,
-  subtitle: {
-    ar: "خلي شغلك يوصل، مو بس ينشاف. فريق علامة يشتغل على الفكرة والتنفيذ والنتيجة سوا، من أول جلسة إلى يوم تشوف الأثر بعينك.",
-    en: "Make your work land — not just get seen. Alama's team works on the idea, the execution, and the outcome together, from the first session to the day you see the impact.",
+  eyebrow: {
+    ar: "وكالة تسويق وإعلانات متكاملة · العراق",
+    en: "Full-service marketing & advertising · Iraq",
   } as Bilingual,
-  ctaPrimary: { ar: "خلنا نسوي شي كبير", en: "Let's build something big" } as Bilingual,
+  titleLine1: { ar: "نصنع حملات", en: "We build campaigns" } as Bilingual,
+  titleHighlight: { ar: "تحجي الناس عنها..", en: "people talk about" } as Bilingual,
+  titleLine2: { ar: "مو تحجي عليها!", en: "— not the other way around." } as Bilingual,
+  subtitle: {
+    ar: "وكالة إعلانية متكاملة.. من الفكرة للترند. إحنا هنا حتى نخلي علامتك التجارية تترك بصمة ما تنمسح.",
+    en: "A full-service agency — from idea to trend. We're here to make your brand leave a mark that never fades.",
+  } as Bilingual,
+  ctaPrimary: { ar: "خلينا نسولف بمشروعك", en: "Let's talk about your project" } as Bilingual,
   ctaSecondary: { ar: "شوف أعمالنا", en: "See our work" } as Bilingual,
-  floatingTag1: { ar: "إعلانات ممولة", en: "Paid Media" } as Bilingual,
-  floatingTag2: { ar: "صناعة محتوى", en: "Content" } as Bilingual,
-  floatingTag3: { ar: "رصد ترندات", en: "Trends" } as Bilingual,
+  scrollHint: { ar: "اسحب لأسفل", en: "Scroll" } as Bilingual,
 };
 
 export const stats: { value: string; labelAr: string; labelEn: string }[] = [
-  { value: "+120", labelAr: "حملة منفذة", labelEn: "Campaigns shipped" },
-  { value: "+45", labelAr: "براند وثق بنا", labelEn: "Brands trusted us" },
-  { value: "×3.4", labelAr: "متوسط نمو النتائج", labelEn: "Average results growth" },
-  { value: "24/7", labelAr: "متابعة وتقارير", labelEn: "Monitoring & reporting" },
+  { value: "+100", labelAr: "عميل راضي", labelEn: "Happy clients" },
+  { value: "+500", labelAr: "حملة ناجحة", labelEn: "Successful campaigns" },
+  { value: "+3M", labelAr: "متابع وصلناله", labelEn: "Followers reached" },
 ];
 
-export const tickerItems: Bilingual[] = [
-  { ar: "إعلانات ممولة", en: "Paid Ads" },
-  { ar: "صناعة محتوى", en: "Content" },
-  { ar: "هوية بصرية", en: "Identity" },
-  { ar: "رصد الترندات", en: "Trends" },
-  { ar: "تصوير ومونتاج", en: "Production" },
-  { ar: "استراتيجيات نمو", en: "Growth" },
-  { ar: "حملات إبداعية", en: "Creative" },
-];
-
-export const strengths: { titleAr: string; titleEn: string; descAr: string; descEn: string }[] = [
-  {
-    titleAr: "الفكرة قبل كل شي",
-    titleEn: "Idea comes first",
-    descAr: "ما نبدأ بالتنفيذ قبل ما نضمن إن الفكرة قوية وتستاهل وقتك وفلوسك.",
-    descEn: "We never execute before making sure the idea is strong enough to deserve your time and budget.",
-  },
-  {
-    titleAr: "نلتزم بالوقت",
-    titleEn: "We respect deadlines",
-    descAr: "خطة زمنية واضحة من أول يوم، وتسليم يحترم جدولك.",
-    descEn: "A clear timeline from day one, with delivery that respects your schedule.",
-  },
-  {
-    titleAr: "عين على الترند",
-    titleEn: "Eye on the trend",
-    descAr: "نراقب السوشيال ميديا أول بأول ونحول أي تحرك لفرصة تخدم براندك.",
-    descEn: "We watch social media constantly and turn every shift into an opportunity for your brand.",
-  },
-  {
-    titleAr: "نتائج نكدر نوريها",
-    titleEn: "Results we can show",
-    descAr: "نشتغل بشفافية، وتقارير واضحة تبين وين واصل الشغل.",
-    descEn: "We work with full transparency and clear reporting on where the work stands.",
-  },
-];
-
-export const about = {
-  eyebrow: { ar: "من نحن", en: "About Us" } as Bilingual,
-  title: { ar: "مو وكالة تسوي بوستات وتخلص", en: "Not just an agency that posts and disappears" } as Bilingual,
-  paragraph1: {
-    ar: "علامة وكالة إبداعية تشتغل على المحتوى والإعلان من جذوره: ليش هذا المحتوى؟ مين يشوفه؟ وشلون يخليه يتحرك؟ نجمع بين الإبداع اللي يوقف الناس عن السكرول، والاستراتيجية اللي توصلك لهدفك التجاري.",
-    en: "Alama is a creative agency that works on content and advertising from the root: why this content, who sees it, and how does it move? We combine creativity that stops the scroll with strategy that reaches your business goal.",
+export const servicesHeading = {
+  eyebrow: { ar: "خدماتنا", en: "What We Do" } as Bilingual,
+  titleA: { ar: "شنو ", en: "What can we " } as Bilingual,
+  titleB: { ar: "نكدر", en: "do" } as Bilingual,
+  titleC: { ar: " نسويلك؟", en: " for you?" } as Bilingual,
+  description: {
+    ar: "خدمات إعلانية شاملة تغطي كل احتياجات علامتك التجارية",
+    en: "Complete advertising services covering every need of your brand",
   } as Bilingual,
-  paragraph2: {
-    ar: "من أول جلسة نفهم فيها براندك وجمهورك، إلى آخر تقرير نحلل فيه النتيجة — كل خطوة مدروسة، وكل فكرة إلها هدف.",
-    en: "From the first session where we understand your brand and audience, to the final report where we analyze the outcome — every step is deliberate, and every idea has a purpose.",
-  } as Bilingual,
-  quote: {
-    ar: "الفكرة مو بس إعلان، الفكرة شلون تخلي الناس تتذكرك.",
-    en: "An idea isn't just an ad — it's how you make people remember you.",
-  } as Bilingual,
-  tags: [
-    { ar: "بولد وواثقة", en: "Bold & Confident" },
-    { ar: "حادة بأفكارها", en: "Sharp Thinking" },
-    { ar: "مودرن دايما", en: "Always Modern" },
-    { ar: "نتائج فوق الكلام", en: "Results Over Talk" },
-  ],
 };
 
 export const services: {
-  icon: "megaphone" | "camera" | "trend" | "identity" | "growth";
+  icon: "flame" | "camera" | "chart" | "pen";
   titleAr: string;
   titleEn: string;
   descAr: string;
   descEn: string;
 }[] = [
   {
-    icon: "megaphone",
-    titleAr: "إعلانات ممولة",
-    titleEn: "Paid Advertising",
-    descAr: "نبني حملات ممولة تعرف وين تحط فلوسك بالضبط، لنتيجة تكدر تلمسها مو بس تشوفها.",
-    descEn: "Paid campaigns that know exactly where to place your budget — for results you can feel, not just see.",
+    icon: "flame",
+    titleAr: "صناعة الترندات",
+    titleEn: "Trend Making",
+    descAr: "نحول فكرتك لمحتوى ينتشر بسرعة الضوء — تريند حقيقي يحجي الناس عنه مو عليه",
+    descEn: "We turn your idea into content that spreads at the speed of light — a real trend people talk about, not just look at.",
   },
   {
     icon: "camera",
-    titleAr: "صناعة محتوى",
-    titleEn: "Content Production",
-    descAr: "من الفكرة للتصوير للمونتاج، محتوى يوقف السكرول ويخلي براندك يحجي بصوته الحقيقي.",
-    descEn: "From concept to shoot to edit — content that stops the scroll and gives your brand its real voice.",
+    titleAr: "تصوير وإخراج",
+    titleEn: "Filming & Directing",
+    descAr: "إنتاج فيديو احترافي بأعلى جودة — من التصوير للمونتاج نخلي شغلك يشعل الشاشة",
+    descEn: "Professional video at the highest quality — from shoot to edit, we make your work light up the screen.",
   },
   {
-    icon: "trend",
-    titleAr: "رصد الترندات",
-    titleEn: "Trend Monitoring",
-    descAr: "نراقب كل تحرك بالسوشيال ميديا ونحول الترند لفرصة تخدم براندك قبل ما يفوتك الوقت.",
-    descEn: "We track every move on social media and turn trends into opportunities before your moment passes.",
+    icon: "chart",
+    titleAr: "إستراتيجيات ديجيتال",
+    titleEn: "Digital Strategies",
+    descAr: "خطط تسويقية مبنية على بيانات وأرقام حقيقية تودي علامتك للمكان الصح",
+    descEn: "Marketing plans built on real data and numbers that take your brand to the right place.",
   },
   {
-    icon: "identity",
-    titleAr: "الهوية البصرية",
-    titleEn: "Brand Identity",
-    descAr: "نبني هوية بصرية واضحة وقوية تخلي براندك ينعرف من أول نظرة بين أي زحمة.",
-    descEn: "A clear, strong visual identity that makes your brand recognizable at first glance, anywhere.",
-  },
-  {
-    icon: "growth",
-    titleAr: "استراتيجيات النمو",
-    titleEn: "Growth Strategy",
-    descAr: "خطة نمو مدروسة تربط بين المحتوى والإعلان والمبيعات، خطوة بخطوة لهدف واضح.",
-    descEn: "A deliberate growth roadmap connecting content, advertising, and sales — step by step toward a clear goal.",
+    icon: "pen",
+    titleAr: "إدارة المحتوى",
+    titleEn: "Content Management",
+    descAr: "محتوى يومي منظم وجذاب يبقي جمهورك متفاعل وعلامتك دايماً في الصورة",
+    descEn: "Daily, engaging content that keeps your audience active and your brand always in the picture.",
   },
 ];
 
-export const workCategories: { key: string; ar: string; en: string }[] = [
-  { key: "all", ar: "كل الأعمال", en: "All work" },
-  { key: "identity", ar: "هوية بصرية", en: "Identity" },
-  { key: "content", ar: "محتوى وتصوير", en: "Content" },
-  { key: "campaign", ar: "حملات ممولة", en: "Campaigns" },
-];
+export const workHeading = {
+  eyebrow: { ar: "أعمالنا", en: "Our Work" } as Bilingual,
+  title: { ar: "شغلنا يحجي عنا", en: "Our work speaks for us" } as Bilingual,
+  description: {
+    ar: "نتائج حقيقية لعملاء حقيقيين — كل مشروع قصة نجاح",
+    en: "Real results for real clients — every project is a success story",
+  } as Bilingual,
+  viewAll: { ar: "شوف كل الأعمال", en: "View all projects" } as Bilingual,
+};
 
 export const work: {
+  slug: string;
   tagAr: string;
   tagEn: string;
   titleAr: string;
   titleEn: string;
   categoryAr: string;
   categoryEn: string;
-  cat: string;
+  descAr: string;
+  descEn: string;
   image: string;
 }[] = [
   {
+    slug: "ramadan-golden-campaign",
+    tagAr: "حملة موسمية",
+    tagEn: "Seasonal Campaign",
+    titleAr: "حملة رمضان الذهبية",
+    titleEn: "Golden Ramadan Campaign",
+    categoryAr: "سوشيال ميديا",
+    categoryEn: "Social Media",
+    descAr:
+      "حملة رمضانية مبنية على هوية بصرية أحمر وذهبي، بمحتوى يومي يليق بروح الشهر ويجبر الناس يوقفون عند السكرول.",
+    descEn:
+      "A Ramadan campaign built on a red-and-gold identity, with daily content that fits the spirit of the month and stops the scroll.",
+    image:
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&fit=crop&auto=format",
+  },
+  {
+    slug: "brand-identity",
+    tagAr: "هوية بصرية",
+    tagEn: "Brand Identity",
+    titleAr: "هوية علامة تجارية",
+    titleEn: "Brand Identity",
+    categoryAr: "برندنغ",
+    categoryEn: "Branding",
+    descAr:
+      "بناء هوية كاملة من الصفر: الألوان، الخطوط، وقواعد الاستخدام — حتى ينعرف براندك من أول نظرة.",
+    descEn:
+      "A complete identity from scratch: colors, typography, and usage rules — so your brand is recognized at first glance.",
+    image:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&fit=crop&auto=format",
+  },
+  {
+    slug: "product-launch",
     tagAr: "إطلاق براند",
     tagEn: "Brand Launch",
-    titleAr: "إطلاق ستارت أب تقني",
-    titleEn: "Tech Startup Launch",
-    categoryAr: "هوية بصرية + حملة إطلاق",
-    categoryEn: "Identity + Launch Campaign",
-    cat: "identity",
+    titleAr: "إطلاق منتج جديد",
+    titleEn: "Product Launch",
+    categoryAr: "تصوير وإخراج",
+    categoryEn: "Filming & Directing",
+    descAr:
+      "لقطات إعلانية بجودة سينمائية تعرّف الجمهور بالمنتج قبل ما ينزل — من الكونسبت للمونتاج.",
+    descEn:
+      "Cinematic ad shots that introduce the product before it lands — from concept to final cut.",
     image: "images/work-1.jpg",
   },
   {
-    tagAr: "محتوى",
-    tagEn: "Content",
-    titleAr: "مطعم كافيه فيرور",
-    titleEn: "Café Fervour",
-    categoryAr: "صناعة محتوى وتصوير احترافي",
-    categoryEn: "Content Production & Photography",
-    cat: "content",
+    slug: "social-media-campaign",
+    tagAr: "حملة محتوى",
+    tagEn: "Content Campaign",
+    titleAr: "حملة التواصل الاجتماعي",
+    titleEn: "Social Media Campaign",
+    categoryAr: "إدارة المحتوى",
+    categoryEn: "Content Management",
+    descAr:
+      "محتوى يومي للسوشيال ميديا يبني حضور ثابت ويجبر المتابعين يتفاعلون، مو بس يسحبون لأسفل.",
+    descEn:
+      "Daily social content that builds a steady presence and makes followers engage — not just scroll.",
     image: "images/work-2.jpg",
   },
   {
-    tagAr: "حملة ممولة",
-    tagEn: "Paid Campaign",
-    titleAr: "حملة موسمية",
-    titleEn: "Seasonal Campaign",
-    categoryAr: "إعلانات ممولة عبر السوشيال ميديا",
-    categoryEn: "Paid Social Media Advertising",
-    cat: "campaign",
-    image: "images/work-3.jpg",
+    slug: "summer-trend",
+    tagAr: "صناعة ترند",
+    tagEn: "Trend Making",
+    titleAr: "ترند الصيف",
+    titleEn: "Summer Trend",
+    categoryAr: "صناعة الترندات",
+    categoryEn: "Trend Making",
+    descAr:
+      "رصدنا الترند وبنينا عليه محتوى خليه ينتشر بسرعة — والبراند صار جزء من الحديث مو طالع منه.",
+    descEn:
+      "We tracked the trend, built content that spread fast — and made the brand part of the conversation, not outside it.",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&fit=crop&auto=format",
   },
   {
-    tagAr: "معرض أعمال",
-    tagEn: "Exhibition",
-    titleAr: "معرض الأنيق للأعمال",
-    titleEn: "Al-Aniq Art Exhibition",
-    categoryAr: "هوية بصرية وتغطية إعلامية",
-    categoryEn: "Brand Identity & Media Coverage",
-    cat: "identity",
-    image: "images/work-4.jpg",
+    slug: "growth-strategy",
+    tagAr: "إستراتيجية نمو",
+    tagEn: "Growth Strategy",
+    titleAr: "إستراتيجية النمو",
+    titleEn: "Growth Strategy",
+    categoryAr: "إستراتيجيات ديجيتال",
+    categoryEn: "Digital Strategies",
+    descAr:
+      "خطة نمو تربط المحتوى والإعلان والمبيعات ببعض، وتحدد وين تحط فلوك خطوة بخطوة.",
+    descEn:
+      "A growth plan connecting content, ads, and sales — showing exactly where your budget goes, step by step.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fit=crop&auto=format",
   },
 ];
 
-export const process: { num: string; titleAr: string; titleEn: string; descAr: string; descEn: string }[] = [
-  {
-    num: "01",
-    titleAr: "نفهم",
-    titleEn: "Discover",
-    descAr: "نغوص بعالم براندك: منافسينك، جمهورك، وشنو يخليك مختلف.",
-    descEn: "We dive into your brand's world: competitors, audience, and what makes you different.",
-  },
-  {
-    num: "02",
-    titleAr: "نخطط",
-    titleEn: "Plan",
-    descAr: "نحط استراتيجية واضحة: شنو نحجي، وين نحجيه، ومتى بالضبط.",
-    descEn: "We build a clear strategy: what to say, where to say it, and exactly when.",
-  },
-  {
-    num: "03",
-    titleAr: "ننفذ",
-    titleEn: "Execute",
-    descAr: "نطلع المحتوى والحملة بجودة عالية وسرعة تحترم وقتك.",
-    descEn: "We deliver content and campaigns with high quality and speed that respects your time.",
-  },
-  {
-    num: "04",
-    titleAr: "نحسن",
-    titleEn: "Optimize",
-    descAr: "نراقب الأرقام ونعدل الاتجاه أول بأول، ما نوقف عند أول نتيجة.",
-    descEn: "We watch the numbers and adjust direction continuously — we never stop at the first result.",
-  },
-];
+export const workArchive = {
+  back: { ar: "العودة للرئيسية", en: "Back to Home" } as Bilingual,
+  titleA: { ar: "أرشيف", en: "Archive" } as Bilingual,
+  titleB: { ar: "الأعمال", en: "Projects" } as Bilingual,
+  description: {
+    ar: "كل مشاريعنا بمكان واحد — من الهوية للحملة للتصوير.",
+    en: "All our projects in one place — from identity to campaign to production.",
+  } as Bilingual,
+};
+
+export const workDetail = {
+  back: { ar: "العودة للأرشيف", en: "Back to Archive" } as Bilingual,
+  serviceLabel: { ar: "الخدمة", en: "Service" } as Bilingual,
+  typeLabel: { ar: "النوع", en: "Type" } as Bilingual,
+  notFound: { ar: "المشروع مو موجود", en: "Project not found" } as Bilingual,
+  next: { ar: "المشروع الجاي", en: "Next Project" } as Bilingual,
+  viewAll: { ar: "شوف الأرشيف", en: "View Archive" } as Bilingual,
+  ctaTitle: { ar: "عندك مشروع مثل هاي؟", en: "Got a project like this?" } as Bilingual,
+  cta: { ar: "خلنا نسولف", en: "Let's talk" } as Bilingual,
+};
 
 export const finalCta = {
-  title: { ar: "عندك فكرة؟ خل نسوي منها حملة.", en: "Got an idea? Let's turn it into a campaign." } as Bilingual,
-  subtitle: {
-    ar: "احجيلنا عن مشروعك، وخلي الباقي علينا.",
-    en: "Tell us about your project, and leave the rest to us.",
+  available: { ar: "متاحين لمشروعك", en: "Open for new projects" } as Bilingual,
+  titleA: { ar: "عندك ", en: "You've got " } as Bilingual,
+  titleHighlight: { ar: "متابعين", en: "followers" } as Bilingual,
+  titleB: { ar: "بس ماكو زبائن؟", en: " but no customers?" } as Bilingual,
+  lead: { ar: "إحنا نحل هاي المشكلة.", en: "We solve this." } as Bilingual,
+  paragraph: {
+    ar: "مو بس متابعين — إحنا نحولهم لزبائن حقيقيين يرجعون ويجيبون ناس ثانية معاهم.",
+    en: "Not just followers — we turn them into real customers who come back and bring others along.",
   } as Bilingual,
-  cta: { ar: "ابدأ المشروع", en: "Start Your Project" } as Bilingual,
+  cta: { ar: "ابدي ويانا هسه", en: "Start with us now" } as Bilingual,
+  chips: [
+    { icon: "pin" as const, ar: "بغداد، العراق", en: "Baghdad, Iraq" },
+    { icon: "clock" as const, ar: "متوفرين 24/7", en: "Available 24/7" },
+    { icon: "spark" as const, ar: "استشارة مجانية", en: "Free consultation" },
+  ],
 };
 
 export const footer = {

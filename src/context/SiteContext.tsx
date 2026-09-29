@@ -32,7 +32,7 @@ function readTheme(): Theme {
   } catch {
     /* ignore */
   }
-  return "light";
+  return "dark";
 }
 
 function readLang(): Lang {
@@ -67,7 +67,7 @@ export function SiteProvider({ children }: { children: ReactNode }) {
     document.documentElement.classList.toggle("dark", theme === "dark");
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", theme === "dark" ? "#0d0d0d" : "#fafaf8");
+      ?.setAttribute("content", theme === "dark" ? "#0a0a0f" : "#fafaf8");
     try {
       window.localStorage.setItem("alama-theme", theme);
     } catch {
